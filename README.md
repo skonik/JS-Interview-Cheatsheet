@@ -101,5 +101,5 @@ department2.find(person => person.age === 23 )
 * **findIndex** - получить индекс первого элемента по заданному условию
 ```javascript
 department2.findIndex(person => person.age === 23 )
-// Object { name: "Sergey", age: 23, salary: 70000 }
+// 0
 ```
