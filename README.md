@@ -103,3 +103,39 @@ department2.find(person => person.age === 23 )
 department2.findIndex(person => person.age === 23 )
 // 0
 ```
+* **push** добавить элемент в конец массива 
+```javascript
+const department = [
+  { name: "Sergey", age: 23, salary: 70000 },
+  { name: "Dmitry", age: 23, salary: 150000 },
+  { name: "Andrey", age: 32, salary: 40000 },
+  { name: "Ivan", age: 21, salary: 50000 }
+]
+department.push({ name: "Alexander", age: 25, salary: 53000 })
+// 5
+console.log(department)
+// 0: Object { name: "Sergey", age: 23, salary: 70000 }
+// 1: Object { name: "Dmitry", age: 23, salary: 150000 }
+// 2: Object { name: "Andrey", age: 32, salary: 40000 }
+// 3: Object { name: "Ivan", age: 21, salary: 50000 }
+// 4: Object { name: "Alexander", age: 25, salary: 53000 }
+```
+* **pop** удалить из массива последний элемент и вернуть
+```javascript
+console.log(department)
+// Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+const last = department.pop()
+console.log(last)
+// Object { name: "Alexander", age: 25, salary: 53000 }
+console.log(department)
+// Array(4) [ {…}, {…}, {…}, {…} ]
+```
+* **shift** - удалить из массива первый элемент и вернуть
+```javascript
+console.log(department)
+// Array(4) [ {…}, {…}, {…}, {…} ]
+let firstItem = department.shift()
+console.log(firstItem)
+// Object { name: "Sergey", age: 23, salary: 70000 }
+console.log(department)
+// Array(3) [ {…}, {…}, {…} ]
